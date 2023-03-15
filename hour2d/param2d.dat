@@ -1,0 +1,29 @@
+1			int ivis;		// 0: Euler		1: Navier-Stokes
+2			int fluxtype;	// Euler fluxes 2: Roe 3: LLF
+2			int pDG;		// polyord;		DG // 0-3;,int polyread; // for iconti==1 read file in poly order
+1			int isteady;	// 0:unsteady (must globaltimestep) 1:steady 2:steady with cfl>0 minstep
+1000000		int itmax;		// number of time step
+1000		int wffre;		// write file frequence for the solution to be saved
+1000		int wsfre;		// write screen frequence for the info to be printed
+1000		int dtfre		// frequence for the dt to be determined
+0			int iconti;		// 0: start with some solution 1: from init.bin
+-15			int resi;		// order of magnitude for the residual to be reduced (for steady problem)
+500			int CFLIncStp;	// cfl linearly increase from step 1 -> this
+2			int iruku;		// rk stages 2
+2			int bcTtype;	// Temperature B.C. 0:none,1: isothermal wall,2: adiabatic wall
+0			int ImResSmoStp;// Implicit Residual Smoothing Steps
+0.1			double ImResCoe;// Implicit Residual Smoothing Coefficient
+10			int ChgMaxStp;
+15.0		double M;
+0.5			double ChgMaxReduc;//
+0.1			double ChgMaxRatio;//rho pre change ratio per step
+5000.0		double Re;		// Reynolds number
+0.3			double Ma;		// inflow mach number
+1.0			double RatioP;	// ratio Pout/Pin
+285.0		double Tinfd;	// inflow temperature for Sutherland laws dimensional
+285.0		double Twald;	// if isothermal walls, wall temperature dimensional
+0.0			double AoA;		// angle of attack in degree
+0.05		double CFL;		// CFL number, negtive means const -dt 0.0009765625 0.00000095367431640625
+1000.0		double tmax;	// maximum physical time. (for unsteady problem)
+input.grd   char g_file[];  //soft linked to the actual grid file
+
